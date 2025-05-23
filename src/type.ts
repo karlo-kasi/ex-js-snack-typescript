@@ -11,12 +11,12 @@ type Dipendente = {
 
 type Developer = Dipendente & {
     livelloEsperienza: "Junior" | "Mind" | "Senior",
-    linguaggi: string[],
-    certificazioni: []
+    linguaggi?: string[],
+    certificazioni: string[]
 }
 
-type ProjectManager = Developer & {
+type ProjectManager = Dipendente & {
     teamSize: number | null,
     budgetGestito?: number
-    stakeholderPrincipali?: string[]
+    stakeholderPrincipali: string[]
 }
