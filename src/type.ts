@@ -20,3 +20,12 @@ type ProjectManager = Dipendente & {
     budgetGestito?: number
     stakeholderPrincipali: string[]
 }
+
+
+type Team = {
+    nome: string,
+    progettoAttuale: string | null,
+    budget: number,
+    membri: [ProjectManager, Developer, ...Developer[]]
+    //Una tuple in cui il primo elemento è sempre un Project Manager, seguito da uno o più Developers (almeno un developer obbligatorio).
+}
